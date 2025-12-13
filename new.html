@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonic Horizon | Sign In</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(160deg, #05060a, #0b0f19, #1a1f35);
+  color: white;
+}
+
+/* LOGIN CARD */
+.login-card {
+  width: 360px;
+  padding: 40px 35px;
+  background: rgba(15, 18, 35, 0.92);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 140, 80, 0.35);
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(#0f1223, #0f1223),
+    linear-gradient(90deg, #ff4f8b, #ff914d);
+  background-clip: padding-box, border-box;
+  animation: popIn 0.6s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* TITLE */
+.login-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff4f8b, #ff914d, #ffcc66);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+
+.login-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+/* INPUTS */
+.login-card input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #1b2038;
+  color: white;
+  font-size: 1rem;
+}
+
+.login-card input::placeholder {
+  color: #aaa;
+}
+
+/* BUTTON */
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff4f8b, #ff914d);
+  color: #0a0a12;
+  transition: 0.3s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 140, 80, 0.5);
+}
+
+/* ERROR */
+.error {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #ff5c5c;
+}
+
+/* FOOT NOTE */
+.note {
+  margin-top: 25px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+  <h2>Sonic Horizon</h2>
+  <p>Sign in to continue your journey</p>
+
+  <input type="text" id="username" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Email Address">
+
+  <button onclick="signIn()">Continue</button>
+
+  <div class="error" id="errorMsg"></div>
+
+  <div class="note">No password required • Just vibes 🎧</div>
+</div>
+
+
+
+</body>
+</html>
